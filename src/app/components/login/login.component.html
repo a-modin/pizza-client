@@ -1,0 +1,13 @@
+<div class="login-form-wrapper shadow">
+  <div class="hint">
+    <span>login: remontista</span><br>
+    <span>pass: pizza</span>
+  </div> 
+
+  <form [formGroup]="loginForm" class="login-form" (ngSubmit)="onSubmit()">
+    <input class="input" placeholder="email" formControlName="login">
+    <input class="input" type="password" placeholder="пароль" formControlName="pass">
+    <span class="validation-message" *ngIf="showValidation">Неверный логин или пароль</span>
+    <button class="button" [disabled]="!loginForm.valid" type="submit" class="button">Войти</button>
+  </form>
+</div>

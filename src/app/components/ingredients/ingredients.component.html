@@ -1,0 +1,9 @@
+<div class="page-wrapper">
+  <div class="header">
+    <h1>Ингредиенты для пиццы:</h1>
+  </div>
+  <ul *ngIf="ingredients" class="ingredients">
+    <li class="ingredient" *ngFor="let ingredient of ingredients">{{ingredient.name}} ({{ingredient.amount}} гр.)</li>
+  </ul>
+  <button class="button" (click)="exit()">Выход</button>
+</div>
